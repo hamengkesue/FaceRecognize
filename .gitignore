@@ -1,0 +1,39 @@
+# Environment & Secret Credentials
+.env
+*.env.local
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Biometric Caches & Security Logs (Privacy protection)
+logs/intruders/*.jpg
+logs/intruders/*.png
+logs/.owner_cache.npz
+.owner_cache.npz
+
+# InsightFace Models & Data
+models/
+*.onnx
+*.zip
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+

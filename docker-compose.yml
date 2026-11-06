@@ -1,0 +1,18 @@
+services:
+  postgres_face_db:
+    image: pgvector/pgvector:pg16
+    container_name: face_guard_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password_rahasia
+      POSTGRES_DB: face_guard_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_face_guard:/var/lib/postgresql/data
+      - ./init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+
+volumes:
+  pgdata_face_guard:
+
